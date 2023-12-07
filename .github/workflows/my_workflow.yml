@@ -38,7 +38,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           reporter: 'github-pr-check'
-          tool_name: 'reviewdog'
+          tool_name: 'checkstyle'
           checkstyle_config: '${{ github.workspace }}/config/checkstyle/checkstyle.xml'
           fail_on_error: true
           level: 'error'
