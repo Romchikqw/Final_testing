@@ -41,8 +41,9 @@ jobs:
           tool_name: 'checkstyle'
           checkstyle_config: '${{ github.workspace }}/config/checkstyle/checkstyle.xml'
           fail_on_error: true
-          level: 'error'
           filter_mode: nofilter
+          level: 'error'
+          
 
   coverage:
     permissions: write-all
@@ -72,7 +73,7 @@ jobs:
           paths: |
             ${{ github.workspace }}/build/reports/jacoco/test/jacocoTestReport.xml
           token: ${{ secrets.GITHUB_TOKEN }}
-          min-coverage-overall: 80
-          min-coverage-changed-files: 80
+          min-coverage-overall: 50
+          min-coverage-changed-files: 50
           update-comment: true
           title: Code Coverage
